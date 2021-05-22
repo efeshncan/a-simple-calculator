@@ -1,0 +1,37 @@
+from math import sin,cos,tan,factorial,radians,sqrt,ceil,floor
+
+def hema2(a,op):
+    if op not in " sqrt  sin cos tan  1/a f! square üs abs ceil floor ":
+        print("Invalid Operator")
+
+    if op == "sqrt":   # sqrt is square root of your value
+        return (sqrt(a))
+    if op == "ceil":   # ceil returns ceiling value of a , the smallest integer not less than a 
+        return (ceil(a))
+    if op == "floor":  # floor returns floor of a , the largest integer not greater than a
+        return (floor(a))
+    if op == "square":  # square is square of your value that you enter
+        return (str(a) + " ^ " + " = " + str(a**(2)))
+    if op == "üs": # üs operator makes a = (a**3)
+        return (str(a) + " ^ " + " = " + str(a**(3)))
+    if op == "1/a":
+        return (str(1/a))
+    if op == "sin":
+        return (sin(radians(a)))
+    if op == "cos":
+        return (cos(radians(a)))
+    if op == "tan":
+        return (tan(radians(a)))
+    if op == "f!":
+        return (factorial(a))
+    if op == "abs": # abs is absolute value of a
+        return (abs(a))
+    
+def main():
+    op = str(input("Select operator: \nPlease choose one of them (1/a,sin,cos,tan,f!,square,üs,abs,sqrt,ceil,floor) : "))
+    a = float(input("Enter the value. If it is angle, please write radian: "))
+
+    print(hema2(a,op))
+    
+if __name__=="__main__":
+    main()
