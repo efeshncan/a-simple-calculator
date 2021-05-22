@@ -1,0 +1,29 @@
+#This calculater includes only operation which has two variables. 
+
+from math import pow
+def hema1(a,b,op):
+    if op not in " +  -  * pow % ":
+        print("Invalid Operator")
+
+    if op == "+":
+        return (str(a) + " + " + str(b) + " = " + str(a+b))
+    if op == "-":
+        return (str(a) + " - " + str(b) + " = " + str(a-b))
+    if op == "/":
+        return (str(a) + " / " + str(b) + " = " + str(a/b))
+    if op == "*":
+        return (str(a) + " * " + str(b) + " = " + str(a*b))
+    if op == "pow":  #pow means (a**b)
+        return (pow(a,b))
+    if op == "%":    #% = a mod b
+        return (str(a) + " mod " + str(b) + " = " + str(a%b))
+    
+def main():
+    op = str(input("Select operator: \nPlease choose one of them ( + , - , * , / , pow , % ) : "))
+    a = float(input("Enter your first value. : "))
+    b = float(input("Enter your second value. : "))
+
+    print(hema1(a,b,op))
+    
+if __name__=="__main__":
+    main()
